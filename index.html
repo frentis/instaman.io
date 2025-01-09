@@ -1,0 +1,157 @@
+/* Сбрасываем отступы и используем единый box-sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif; /* Убедитесь, что шрифт подключён */
+}
+
+/* Оформление body */
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+
+  /* Замените # на реальную ссылку или уберите, если фона нет */
+  background-image: url(#);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/* Оформление секции с формой */
+section {
+  position: relative;
+  max-width: 400px;
+  background-color: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  backdrop-filter: blur(55px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 3rem;
+}
+
+/* Заголовок формы */
+h1 {
+  font-size: 2rem;
+  color: #fff;
+  text-align: center;
+}
+
+/* Обёртка для полей ввода */
+.inputbox {
+  position: relative;
+  margin: 30px 0;
+  max-width: 310px;
+  border-bottom: 2px solid #fff; /* Перенесено сюда */
+}
+
+/* Метка (label) для инпута */
+.inputbox label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 1rem;
+  pointer-events: none;
+  transition: all 0.5s ease-in-out;
+}
+
+/* Эффект «поднятия» метки при вводе */
+input:focus ~ label,
+input:valid ~ label {
+  top: -5px;
+}
+
+/* Стили для самого инпута */
+.inputbox input {
+  width: 100%;
+  height: 60px;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  padding: 0 35px 0 5px;
+  color: #fff;
+}
+
+/* Иконка Ionicons внутри поля */
+.inputbox ion-icon {
+  position: absolute;
+  right: 8px;
+  top: 20px;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+/* Блок с чекбоксом "Remember Me" и ссылкой "Forget Password" */
+.forget {
+  margin: 35px 0;
+  font-size: 0.85rem;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Для выравнивания чекбокса и текста "Remember Me" */
+.forget label {
+  display: flex;
+  align-items: center;
+}
+
+.forget label input {
+  margin-right: 3px;
+}
+
+/* Ссылка "Forget Password" */
+.forget a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.forget a:hover {
+  text-decoration: underline;
+}
+
+/* Кнопка отправки формы */
+button {
+  width: 100%;
+  height: 40px;
+  border-radius: 40px;
+  background-color: rgba(255, 255, 255, 1);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.4s ease;
+}
+
+button:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Блок регистрации (текст «Don't have an account? Register») */
+.register {
+  /* Примерно 0.9rem, т.к. 8.9rem — очень крупно */
+  font-size: 0.9rem; 
+  color: #fff;
+  text-align: center;
+  margin: 25px 0 10px;
+}
+
+/* Ссылка внутри .register p */
+.register p a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+}
+
+.register p a:hover {
+  text-decoration: underline;
+}
